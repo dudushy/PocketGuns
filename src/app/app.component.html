@@ -1,11 +1,21 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
     <ion-menu side="start" menuId="mainMenu" contentId="main-content">
-      <ion-toolbar translucent color="template-{{theme}}">
+      <ion-toolbar translucent color="pg-yellow">
         <ion-title (click)="redirectAndCloseMenu('dev-menu')">PocketGuns</ion-title>
       </ion-toolbar>
 
       <ion-content [attr.theme]="theme">
+        <ion-grid class="menu-grid">
+          <ion-row justify-content-center>
+            <ion-col align-self-center>
+              <div class="menu-title">
+                <ion-img src="/assets/icon/favicon.ico" id="img-icon"></ion-img>
+                <h5>PocketGuns</h5>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
         <ion-list>
           <hr>
 
