@@ -1,5 +1,5 @@
 <ion-header [attr.theme]="theme">
-  <ion-toolbar class="menu-toolbar" color="template-{{theme}}">
+  <ion-toolbar class="menu-toolbar" color="pg-yellow">
     <ion-buttons slot="start">
       <ion-button (click)="app.toggleMenu()">
         <ion-icon name="menu-sharp"></ion-icon>
@@ -14,7 +14,7 @@
 
 <ion-content [attr.theme]="theme">
   <ion-list>
-    <ion-item (click)="toggleTheme()" color="template-{{theme}}">
+    <ion-item disabled (click)="toggleTheme()" color="pg-yellow">
       <ion-label [attr.theme]="theme">Theme</ion-label>
       <!-- <ion-icon name="checkmark-circle" slot="start" *ngIf="isDark == true" [attr.theme]="theme"></ion-icon> -->
       <ion-icon name="moon" slot="end" *ngIf="isDark == true" [attr.theme]="theme"></ion-icon>
