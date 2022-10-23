@@ -1,7 +1,7 @@
-<!--! Replace all 'template-ionic' to your PROJECT_NAME -->
+<!--! Replace all 'PocketGuns' to your PROJECT_NAME -->
 
-# [template-ionic](https://github.com/dudushy/template-ionic/)
-Template for Ionic projects.
+# [PocketGuns](https://github.com/dudushy/PocketGuns/)
+TODO
 
 # Setup
 ```npm i```
