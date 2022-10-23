@@ -6,26 +6,7 @@
       </ion-toolbar>
 
       <ion-content [attr.theme]="theme">
-        <ion-button color="danger" expand="block" (click)="logout()" *ngIf="username != 'Guest'">
-          log out
-        </ion-button>
-
         <ion-list>
-          <ion-item>
-            <ion-grid id="user-grid">
-              <ion-row>
-                <ion-col>
-                  <ion-icon id="user-icon" name="person-circle"></ion-icon>
-                </ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>
-                  <ion-label id="user-name">{{username}}</ion-label>
-                </ion-col>
-              </ion-row>
-            </ion-grid>
-          </ion-item>
-
           <hr>
 
           <ion-item>

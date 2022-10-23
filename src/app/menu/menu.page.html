@@ -13,6 +13,17 @@
 </ion-header>
 
 <ion-content [attr.theme]="theme">
+  <ion-grid class="menu-grid">
+    <ion-row justify-content-center>
+      <ion-col align-self-center>
+        <div class="menu-title">
+          <ion-img src="/assets/icon/favicon.png" id="img-icon"></ion-img>
+          <h5>PocketGuns</h5>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
   <ion-list>
     <ion-button color="primary" expand="block" (click)="youPressed('primary')">primary</ion-button>
 

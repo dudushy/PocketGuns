@@ -94,9 +94,7 @@ export class AppComponent {
     console.log(`[${this.title}#redirectTo] ${from} | url`, url);
     console.log(`[${this.title}#redirectTo] router.config`, this.router.config);
 
-    if (from === 'LoginPage') { this.username = this.storage.get('username', this.title) == null ? 'Guest' : this.storage.get('username', this.title); }
-
-    if (url == null) { url = 'login'; }
+    if (url == null) { url = 'menu'; }
     this.router.navigateByUrl(`/${url}`);
 
     this.currentPage = url;
@@ -117,17 +115,5 @@ export class AppComponent {
   redirectAndCloseMenu(url: any) {
     this.redirectTo(url, this.title);
     this.toggleMenu();
-  }
-
-  logout() {
-    console.log(`[${this.title}#logout]`);
-
-    this.storage.set('username', null, this.title);
-    this.username = 'Guest';
-    this.storage.set('login_email', null, this.title);
-    this.storage.set('login_password', null, this.title);
-    this.storage.set('rememberLogin', null, this.title);
-
-    this.updateView(this.title);
   }
 }
