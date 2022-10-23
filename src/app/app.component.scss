@@ -1,0 +1,43 @@
+@import "/src/theme/variables.scss";
+
+ion-toolbar {
+  // --background: $wall-active;
+  // background-color: $wall-active;
+
+  ion-title {
+    // color: $text-default;
+    text-align: center;
+  }
+}
+
+#user-grid {
+  text-align: center;
+
+  #user-icon {
+    font-size: 5em;
+  }
+
+  #user-name {
+    color: $wall-active;
+  }
+}
+
+hr {
+  padding: 0.2em;
+  background-color: $wall-default;
+  border-radius: 30px;
+}
+
+.pageButton {
+  padding: 0.5em;
+  // margin-left: 1em;
+  border-radius: 10px;
+}
+.pageButton[isOn="false"] {
+  background-color: $wall-default !important;
+  color: $text-default;
+}
+.pageButton[isOn="true"] {
+  background-color: $wall-active !important;
+  color: $text-active;
+}
