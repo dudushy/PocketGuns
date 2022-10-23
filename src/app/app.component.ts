@@ -7,6 +7,8 @@ import { MenuController, Platform, AlertController } from '@ionic/angular';
 
 import { StorageService } from 'src/app/.services/storage.service';
 
+import { ScreenOrientation } from '@awesome-cordova-plugins/screen-orientation/ngx';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -26,12 +28,16 @@ export class AppComponent {
     private menu: MenuController,
     public platform: Platform,
     public alertController: AlertController,
-    public storage: StorageService
+    public storage: StorageService,
+    private screenOrientation: ScreenOrientation
   ) {
     console.log(`[${this.title}#constructor]`);
 
     this.platform.ready().then((readySource) => {
       console.log(`[${this.title}#constructor] readySource`, readySource);
+
+      this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
+      console.log(`[${this.title}#constructor] screenOrientation -> PORTRAIT`);
 
       this.theme = this.storage.get('theme', this.title) == null ? 'dark' : this.storage.get('theme', this.title);
 
