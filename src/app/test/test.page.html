@@ -13,6 +13,6 @@
 </ion-header>
 
 <ion-content [attr.theme]="theme">
-  <p>HELLO</p>
-  <ion-button color="danger">test</ion-button>
+  <ion-icon *ngIf="photo == undefined" name="camera" (click)="askSourceType()"></ion-icon>
+  <img *ngIf="photo != undefined" src="{{photo.src}}" (click)="askSourceType()">
 </ion-content>
