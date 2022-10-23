@@ -1,43 +1,58 @@
 @import "/src/theme/variables.scss";
 
 ion-toolbar {
-  // --background: $wall-active;
-  // background-color: $wall-active;
-
   ion-title {
-    // color: $text-default;
     text-align: center;
   }
 }
 
-#user-grid {
+ion-grid.menu-grid {
+  background-color: $pg-yellow;
+  position: relative;
+}
+
+ion-grid.menu-grid:after {
+  pointer-events: none;
+  width: 100%;
+  height: 4em;
+}
+
+.menu-title {
+  justify-content: center;
   text-align: center;
+  background-color: $pg-black;
+  padding: 0.3em;
+  border-radius: 10px;
+  margin-bottom: 0.5em;
+}
 
-  #user-icon {
-    font-size: 5em;
-  }
+#img-icon {
+  margin: auto;
+  height: 2.5em;
+  width: 2.5em;
+  margin-top: 1em;
+  margin-bottom: -0.8em;
+}
 
-  #user-name {
-    color: $wall-active;
-  }
+h5 {
+  color: $pg-yellow;
 }
 
 hr {
   padding: 0.2em;
-  background-color: $wall-default;
+  background-color: $pg-black;
   border-radius: 30px;
 }
 
 .pageButton {
   padding: 0.5em;
-  // margin-left: 1em;
   border-radius: 10px;
 }
 .pageButton[isOn="false"] {
-  background-color: $wall-default !important;
-  color: $text-default;
+  background-color: $pg-red !important;
+  color: $pg-yellow;
 }
 .pageButton[isOn="true"] {
-  background-color: $wall-active !important;
-  color: $text-active;
+  background-color: $pg-black !important;
+  color: $pg-yellow;
 }
