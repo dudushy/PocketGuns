@@ -13,7 +13,7 @@
 </ion-header>
 
 <ion-content [attr.theme]="theme">
-  <ion-button *ngFor="let page of allPages | keyvalue : defaultOrder" expand="block" color="template-{{theme == 'dark' ? 'light' : 'dark'}}" (click)="redirectTo(page.value.toString())">
+  <ion-button *ngFor="let page of allPages | keyvalue : defaultOrder" expand="block" color="pg-black" (click)="redirectTo(page.value.toString())">
     {{page.value}}
   </ion-button>
 </ion-content>
