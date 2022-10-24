@@ -13,25 +13,23 @@
 </ion-header>
 
 <ion-content [attr.theme]="theme">
-  <ion-list>
-    <ion-button color="primary" expand="block" (click)="youPressed('primary')">primary</ion-button>
+  <ion-button color="primary" expand="block" (click)="youPressed('primary')">primary</ion-button>
 
-    <ion-button color="secondary" expand="block" (click)="youPressed('secondary')">secondary</ion-button>
+  <ion-button color="secondary" expand="block" (click)="youPressed('secondary')">secondary</ion-button>
 
-    <ion-button color="tertiary" expand="block" (click)="youPressed('tertiary')">tertiary</ion-button>
+  <ion-button color="tertiary" expand="block" (click)="youPressed('tertiary')">tertiary</ion-button>
 
-    <ion-button color="success" expand="block" (click)="youPressed('success')">success</ion-button>
+  <ion-button color="success" expand="block" (click)="youPressed('success')">success</ion-button>
 
-    <ion-button color="warning" expand="block" (click)="youPressed('warning')">warning</ion-button>
+  <ion-button color="warning" expand="block" (click)="youPressed('warning')">warning</ion-button>
 
-    <ion-button color="danger" expand="block" (click)="youPressed('danger')">danger</ion-button>
+  <ion-button color="danger" expand="block" (click)="youPressed('danger')">danger</ion-button>
 
-    <ion-button color="dark" expand="block" (click)="youPressed('dark')">dark</ion-button>
+  <ion-button color="dark" expand="block" (click)="youPressed('dark')">dark</ion-button>
 
-    <ion-button color="medium" expand="block" (click)="youPressed('medium')">medium</ion-button>
+  <ion-button color="medium" expand="block" (click)="youPressed('medium')">medium</ion-button>
 
-    <ion-button color="light" expand="block" (click)="youPressed('light')">light</ion-button>
-  </ion-list>
+  <ion-button color="light" expand="block" (click)="youPressed('light')">light</ion-button>
 
-  <ion-title color="light">You pressed: {{buttonPressed}}</ion-title>
+  <ion-title [attr.theme]="theme">You pressed: {{buttonPressed}}</ion-title>
 </ion-content>
