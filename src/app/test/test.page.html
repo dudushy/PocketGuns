@@ -13,6 +13,35 @@
 </ion-header>
 
 <ion-content [attr.theme]="theme">
-  <ion-icon *ngIf="photo == undefined" name="camera" (click)="askSourceType()"></ion-icon>
-  <img *ngIf="photo != undefined" src="{{photo.src}}" (click)="askSourceType()">
+  <div id="setupDiv">
+    <!--? Idle -->
+    <span [attr.theme]="theme">Idle</span>
+    <br>
+    <ion-icon *ngIf="imgIdle == undefined" name="camera" (click)="askSourceType('imgIdle')"></ion-icon>
+    <img *ngIf="imgIdle != undefined" src="{{imgIdle.src}}" (click)="askSourceType('imgIdle')">
+    <hr>
+    <br>
+
+    <!--? Fire -->
+    <span [attr.theme]="theme">Fire</span>
+    <br>
+    <ion-icon *ngIf="imgFire == undefined" name="camera" (click)="askSourceType('imgFire')"></ion-icon>
+    <img *ngIf="imgFire != undefined" src="{{imgFire.src}}" (click)="askSourceType('imgFire')">
+    <hr>
+    <br>
+
+    <!--? Empty -->
+    <span [attr.theme]="theme">Empty</span>
+    <br>
+    <ion-icon *ngIf="imgEmpty == undefined" name="camera" (click)="askSourceType('imgEmpty')"></ion-icon>
+    <img *ngIf="imgEmpty != undefined" src="{{imgEmpty.src}}" (click)="askSourceType('imgEmpty')">
+    <hr>
+    <br>
+
+    <!--? Reload -->
+    <span [attr.theme]="theme">Reload</span>
+    <br>
+    <ion-icon *ngIf="imgReload == undefined" name="camera" (click)="askSourceType('imgReload')"></ion-icon>
+    <img *ngIf="imgReload != undefined" src="{{imgReload.src}}" (click)="askSourceType('imgReload')">
+  </div>
 </ion-content>
