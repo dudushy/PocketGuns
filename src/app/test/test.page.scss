@@ -1,1 +1,35 @@
 @import "/src/theme/variables.scss";
+
+#setupDiv {
+  display: block;
+  justify-content: center;
+  text-align: center;
+  margin-top: 5%;
+
+  span {
+    font-size: 4vmax;
+    background-color: lighten($pg-yellow, 10%);
+    border-radius: 10px;
+    padding: 2%;
+    padding-bottom: 0.5%;
+  }
+
+  ion-icon {
+    font-size: 10vmax;
+    fill: $pg-red;
+    padding: 25%;
+    border-radius: 10px;
+    border: 1px dashed $pg-black;
+  }
+
+  img {
+    padding: 1%;
+    border-radius: 10px;
+    border: 1px dashed $pg-black;
+  }
+
+  hr {
+    padding: 3%;
+    background: $pg-black;
+  }
+}
