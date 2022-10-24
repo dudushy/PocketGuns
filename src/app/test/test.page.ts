@@ -18,7 +18,10 @@ export class TestPage implements OnInit {
   title = 'TestPage';
   theme: any = 'dark';
 
-  photo: any = undefined;
+  imgIdle: any = undefined;
+  imgFire: any = undefined;
+  imgEmpty: any = undefined;
+  imgReload: any = undefined;
 
   constructor(
     public app: AppComponent,
@@ -57,12 +60,12 @@ export class TestPage implements OnInit {
     this.app.redirectTo(url, this.title);
   }
 
-  takePicture(sourceType) {
+  takePicture(sourceType, imgVar) {
     try {
       const options: CameraOptions = {
-        // quality: 100,
-        targetWidth: 200,
-        targetHeight: 200,
+        quality: 100,
+        targetWidth: 400,
+        targetHeight: 400,
         destinationType: this.camera.DestinationType.FILE_URI,
         // encodingType: this.camera.EncodingType.JPEG,
         mediaType: this.camera.MediaType.PICTURE,
@@ -78,12 +81,12 @@ export class TestPage implements OnInit {
         const win: any = window;
         const safeURL = win.Ionic.WebView.convertFileSrc(imagePath);
 
-        this.photo = {
+        this[imgVar] = {
           src: safeURL,
           path: imagePath,
         };
 
-        console.log(`[${this.title}#takePicture] photo`, this.photo);
+        console.log(`[${this.title}#takePicture] ${imgVar}`, this[imgVar]);
 
         this.updateView();
       }, (err) => {
@@ -94,24 +97,24 @@ export class TestPage implements OnInit {
     }
   }
 
-  async askSourceType() {
+  async askSourceType(imgVar) {
     const actionSheet = await this.actionSheetController.create({
-      header: 'Substituir imagem',
+      header: 'Take picture',
       cssClass: 'actionSheet-askSourceType',
       buttons: [{
-        text: 'Usar camera',
+        text: 'Use camera',
         icon: 'camera',
         handler: () => {
           console.log(`[${this.title}#askSourceType] takePicture(camera)`);
-          this.takePicture(1);
+          this.takePicture(1, imgVar);
         }
       },
       {
-        text: 'Selecionar da galeria',
+        text: 'Select from gallery',
         icon: 'image',
         handler: () => {
           console.log(`[${this.title}#askSourceType] takePicture(gallery)`);
-          this.takePicture(0);
+          this.takePicture(0, imgVar);
         }
       },
       {
