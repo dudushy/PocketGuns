@@ -1,7 +1,0 @@
-{
-  "name": "PocketGuns",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
-}
